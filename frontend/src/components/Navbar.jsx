@@ -1,13 +1,43 @@
+import { Bell, UserCircle2 } from "lucide-react";
+
 export default function Navbar() {
   return (
-    <header className="h-16 bg-white border-b flex items-center justify-between px-8">
+    <header className="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8">
 
-      <h2 className="text-xl font-semibold">
-        GNSS Virtual Laboratory
-      </h2>
+      <div>
+        <h1 className="text-lg font-bold text-slate-800">
+          GNSS Virtual Laboratory
+        </h1>
+      </div>
 
-      <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">
-        O
+      <div className="flex items-center gap-5">
+
+        <Bell
+          className="text-slate-600 cursor-pointer"
+          size={18}
+        />
+
+        <div className="flex items-center gap-2">
+
+          <UserCircle2
+            size={28}
+            className="text-blue-600"
+          />
+
+          <div>
+
+            <p className="text-sm font-semibold">
+              Omaima
+            </p>
+
+            <p className="text-xs text-slate-500">
+              Student
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
     </header>

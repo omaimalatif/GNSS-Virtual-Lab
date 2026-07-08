@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "What is GNSS?",
+        "category": "Introduction",
+        "content": "GNSS (Global Navigation Satellite System) is a satellite-based navigation system that provides Position, Navigation and Timing (PNT) services worldwide."
+    },
+    {
+        "id": 2,
+        "title": "GPS",
+        "category": "Constellation",
+        "content": "GPS is the Global Positioning System developed by the United States."
+    },
+    {
+        "id": 3,
+        "title": "GLONASS",
+        "category": "Constellation",
+        "content": "GLONASS is Russia's global satellite navigation system."
+    }
+]
