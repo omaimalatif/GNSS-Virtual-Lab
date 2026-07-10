@@ -1,5 +1,4 @@
 from fastapi import APIRouter
-
 from app.models.visibility_request import VisibilityRequest
 from app.services.visibility import compute_visibility
 

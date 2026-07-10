@@ -17,6 +17,9 @@ def compute_visibility(latitude, longitude, height):
 
     satellites = []
 
+   
+    
+
     for sv in nav.sv.values:
 
         try:
