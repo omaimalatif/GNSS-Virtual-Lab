@@ -10,3 +10,4 @@ Requests==2.34.2
 SQLAlchemy==2.0.51
 psycopg2-binary==2.9.12
 uvicorn==0.50.2
+email-validator==2.3.0
