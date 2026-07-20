@@ -61,7 +61,7 @@ export default function Dop() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:8000/dop', {
+      const response = await fetch('/dop', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

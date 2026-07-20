@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
+import api from "../api/axios";
 import MapPicker from "../components/MapPicker";
 
 export default function PositioningEstimation() {

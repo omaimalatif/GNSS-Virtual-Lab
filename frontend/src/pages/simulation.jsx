@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Skyplot from '../components/Skyplot';
 import MapPicker from "../components/MapPicker";
+import api from '../api/axios';
 
 export default function Simulation() {
   const [latitude, setLatitude] = useState("");
@@ -37,7 +38,7 @@ export default function Simulation() {
   const fetchVisibility = async (lat, lon, h) => {
     setLoading(true);
     try {
-      const response = await axios.post("/visibility/", {
+      const response = await api.post("/visibility/", {
         latitude: Number(lat),
         longitude: Number(lon),
         height: Number(h),
