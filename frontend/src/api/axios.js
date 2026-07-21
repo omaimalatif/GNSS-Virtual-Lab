@@ -1,14 +1,13 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://gnss-virtual-lab-backend.onrender.com/api",
+    baseURL: "https://gnss-virtual-lab-backend.onrender.com",
     headers: {
         "Content-Type": "application/json",
     },
 });
 
 api.interceptors.request.use((config) => {
-
     const token = localStorage.getItem("token");
 
     if (token) {
