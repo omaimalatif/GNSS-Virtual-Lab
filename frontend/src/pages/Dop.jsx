@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MapPicker from "../components/MapPicker";
+import api from "../api/axios";
 
 const PAKISTAN_LOCATIONS = {
   custom: { name: 'Custom Coordinates', lat: '', lng: '', alt: '' },
@@ -61,18 +62,12 @@ export default function Dop() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('/dop', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          latitude: parseFloat(formData.latitude),
-          longitude: parseFloat(formData.longitude),
-          height: parseFloat(formData.height)
-        })
-      });
-      if (!response.ok) throw new Error(`Server error: ${response.status}`);
-      const data = await response.json();
-      setDopResults(data);
+      const response = await api.post('/dop/', {
+  latitude: parseFloat(formData.latitude),
+  longitude: parseFloat(formData.longitude),
+  height: parseFloat(formData.height)
+});
+setDopResults(response.data);
     } catch (err) {
       setError("Failed to fetch calculation from the GNSS backend service.");
     } finally {
